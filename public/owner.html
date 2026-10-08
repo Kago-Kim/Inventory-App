@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Owner Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Owner Dashboard</h1>
+  <div class="header-actions">
+    <button class="secondary" onclick="logout()">Log out</button>
+  </div>
+</header>
+
+<div class="card">
+  <h2>Daily Reconciliation</h2>
+  <p class="hint">Compare the cash brought to you against what was actually sold that day.</p>
+  <div id="daily-records-list"></div>
+</div>
+
+<div class="card">
+  <h2>Current Stock</h2>
+  <table id="stock-table">
+    <thead><tr><th>Product</th><th>Price</th><th>In stock</th><th>Restock</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>Add Product</h2>
+  <input id="new-product-name" type="text" placeholder="Product name" />
+  <input id="new-product-price" type="number" placeholder="Price" />
+  <input id="new-product-qty" type="number" placeholder="Starting quantity" />
+  <button onclick="addProduct()">Add Product</button>
+  <p id="add-product-message"></p>
+</div>
+
+<div class="card">
+  <h2>Add Employee</h2>
+  <input id="new-employee-name" type="text" placeholder="Full name" />
+  <input id="new-employee-username" type="text" placeholder="Username" />
+  <input id="new-employee-password" type="password" placeholder="Password (min 6 characters)" />
+  <button onclick="addEmployee()">Add Employee</button>
+  <p id="add-employee-message"></p>
+</div>
+
+<script src="shared.js"></script>
+<script src="owner.js"></script>
+</body>
+</html>

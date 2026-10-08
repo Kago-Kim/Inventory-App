@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Record Today's Sales</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Record Today's Sales</h1>
+  <div class="header-actions">
+    <button class="secondary" onclick="logout()">Log out</button>
+  </div>
+</header>
+
+<div class="card">
+  <p class="hint">For each item, enter how many were sold today. Leave items at 0 if none were sold.</p>
+  <div id="items-list"></div>
+</div>
+
+<div class="card">
+  <h2>Notes</h2>
+  <p class="hint">Anything the owner should know about today (e.g. a damaged item, a special discount given, why something is missing).</p>
+  <textarea id="notes" placeholder="Notes for the owner (optional)"></textarea>
+</div>
+
+<div class="card">
+  <button onclick="submitDailyRecord()">Submit Today's Sales</button>
+  <p id="submit-message"></p>
+</div>
+
+<script src="shared.js"></script>
+<script src="employee.js"></script>
+</body>
+</html>
